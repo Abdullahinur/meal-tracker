@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Meal tracker</h1>\n<hr/>\n<meal-form (newMealSender)=\"addMeal($event)\"></meal-form>\n<hr/>\n<meal-info [childMealList]=\"masterMealList\" (clickSender)=\"showDetails($event)\"></meal-info>\n\n<meal-edit [childSelectedMeal]=\"selectedMeal\" (doneClickedSender)=\"finishedEditing()\"></meal-edit>\n\n<footer>\n  <p id=\"copyright\"><br/>\n    <small>Abdullahinur Abdullahi 2017</small>\n  </p>\n</footer>\n"
+module.exports = "<h1>Meal tracker</h1>\n<hr/>\n<meal-form (newMealSender)=\"addMeal($event)\"></meal-form>\n<hr/>\n<meal-info [childMealList]=\"MealList\" (clickSender)=\"showDetails($event)\"></meal-info>\n\n<meal-edit [childSelectedMeal]=\"selectedMeal\" (doneClickedSender)=\"finishedEditing()\"></meal-edit>\n\n<footer>\n  <p id=\"copyright\"><br/>\n    <small>Abdullahinur Abdullahi 2017</small>\n  </p>\n</footer>\n"
 
 /***/ }),
 
@@ -57,7 +57,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var AppComponent = (function () {
     function AppComponent() {
-        this.masterMealList = [
+        this.MealList = [
             { name: 'Chicken with rice', details: 'Chicken in tomato sauce with rice', calories: 500 },
             { name: 'Fish with pasta', details: 'Fish in cream sauce with fussili', calories: 600 },
             { name: 'Lamb with rice', details: 'Grilled lamb with mint sauce and rice', calories: 800 },
@@ -66,7 +66,7 @@ var AppComponent = (function () {
         this.selectedMeal = null;
     }
     AppComponent.prototype.addMeal = function (newMealFromChild) {
-        this.masterMealList.push(newMealFromChild);
+        this.MealList.push(newMealFromChild);
     };
     AppComponent.prototype.showDetails = function (clickedMeal) {
         this.selectedMeal = clickedMeal;
@@ -219,7 +219,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes bounceInUp {\n  from, 60%, 75%, 90%, to {\n    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);\n            animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);\n  }\n\n  from {\n    opacity: 0;\n    -webkit-transform: translate3d(0, 3000px, 0);\n            transform: translate3d(0, 3000px, 0);\n  }\n\n  60% {\n    opacity: 1;\n    -webkit-transform: translate3d(0, -20px, 0);\n            transform: translate3d(0, -20px, 0);\n  }\n\n  75% {\n    -webkit-transform: translate3d(0, 10px, 0);\n            transform: translate3d(0, 10px, 0);\n  }\n\n  90% {\n    -webkit-transform: translate3d(0, -5px, 0);\n            transform: translate3d(0, -5px, 0);\n  }\n\n  to {\n    -webkit-transform: translate3d(0, 0, 0);\n            transform: translate3d(0, 0, 0);\n  }\n}\n\n@keyframes bounceInUp {\n  from, 60%, 75%, 90%, to {\n    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);\n            animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);\n  }\n\n  from {\n    opacity: 0;\n    -webkit-transform: translate3d(0, 3000px, 0);\n            transform: translate3d(0, 3000px, 0);\n  }\n\n  60% {\n    opacity: 1;\n    -webkit-transform: translate3d(0, -20px, 0);\n            transform: translate3d(0, -20px, 0);\n  }\n\n  75% {\n    -webkit-transform: translate3d(0, 10px, 0);\n            transform: translate3d(0, 10px, 0);\n  }\n\n  90% {\n    -webkit-transform: translate3d(0, -5px, 0);\n            transform: translate3d(0, -5px, 0);\n  }\n\n  to {\n    -webkit-transform: translate3d(0, 0, 0);\n            transform: translate3d(0, 0, 0);\n  }\n}\n\n* {\n  -webkit-animation: bounceInUp 2.5s ease-in;\n          animation: bounceInUp 2.5s ease-in;\n  color: #66ccff;\n}\n", ""]);
+exports.push([module.i, "@-webkit-keyframes bounceInUp {\n  from, 60%, 75%, 90%, to {\n    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);\n            animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);\n  }\n\n  from {\n    opacity: 0;\n    -webkit-transform: translate3d(0, 3000px, 0);\n            transform: translate3d(0, 3000px, 0);\n  }\n\n  60% {\n    opacity: 1;\n    -webkit-transform: translate3d(0, -20px, 0);\n            transform: translate3d(0, -20px, 0);\n  }\n\n  75% {\n    -webkit-transform: translate3d(0, 10px, 0);\n            transform: translate3d(0, 10px, 0);\n  }\n\n  90% {\n    -webkit-transform: translate3d(0, -5px, 0);\n            transform: translate3d(0, -5px, 0);\n  }\n\n  to {\n    -webkit-transform: translate3d(0, 0, 0);\n            transform: translate3d(0, 0, 0);\n  }\n}\n\n@keyframes bounceInUp {\n  from, 60%, 75%, 90%, to {\n    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);\n            animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);\n  }\n\n  from {\n    opacity: 0;\n    -webkit-transform: translate3d(0, 3000px, 0);\n            transform: translate3d(0, 3000px, 0);\n  }\n\n  60% {\n    opacity: 1;\n    -webkit-transform: translate3d(0, -20px, 0);\n            transform: translate3d(0, -20px, 0);\n  }\n\n  75% {\n    -webkit-transform: translate3d(0, 10px, 0);\n            transform: translate3d(0, 10px, 0);\n  }\n\n  90% {\n    -webkit-transform: translate3d(0, -5px, 0);\n            transform: translate3d(0, -5px, 0);\n  }\n\n  to {\n    -webkit-transform: translate3d(0, 0, 0);\n            transform: translate3d(0, 0, 0);\n  }\n}\n\n* {\n  -webkit-animation: bounceInUp 2.5s ease-in;\n          animation: bounceInUp 2.5s ease-in;\n  color: #66ccff;\n  display: inline;\n\n}\n", ""]);
 
 // exports
 
@@ -232,7 +232,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/meal-form/meal-form.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form>\n  <label>Meal:\n    <input  class =\"form-control\" name=\"name\"#newName type=\"text\" placeholder=\"Enter meal here..\">\n  </label>\n  <label>Details:\n    <input class =\"form-control\" name=\"details\" #newDetails type=\"text\" placeholder=\"Enter details here..\">\n  </label>\n  <label>Calories:\n    <input class = \"form-control\" name=\"calories\" #newCalories type = \"number\" placeholder=\"Enter calories here..\">\n  </label>\n  <button\n            class = \"btn btn-info\"\n            (click) = \"\n            addClicked (newName.value, newDetails.value, newCalories.value);\n            newNames.value = '';\n            newDetails.value = '';\n            newCalories.value = '';\n        \">Add New Meal</button>\n</form>\n"
+module.exports = "<form>\n  <label>Meal:\n    <input  class =\"form-control\" name=\"value\" #newName type=\"text\" placeholder=\"Enter meal here..\">\n  </label>\n  <label>Details:\n    <textarea class =\"form-control\" name=\"details\" #newDetails type=\"text\" rows=\"1\" placeholder=\"Enter details here..\"></textarea>\n  </label>\n  <label>Calories:\n    <input class = \"form-control\" name=\"calories\" #newCalories type = \"number\" placeholder=\"Enter calories here..\">\n  </label>\n  <button\n            class = \"btn btn-info\"\n            (click) = \"\n            addClicked (newName.value, newDetails.value, newCalories.value);\n            newNames.value =  '';\n            newDetails.value = '';\n            newCalories.value = '';\n        \">Add New Meal</button>\n</form>\n"
 
 /***/ }),
 
