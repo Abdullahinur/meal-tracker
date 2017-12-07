@@ -1,0 +1,19 @@
+<form>
+  <label>Meal:
+    <input  class ="form-control" name="value" #newName type="text" placeholder="Enter meal here..">
+  </label>
+  <label>Details:
+    <textarea class ="form-control" name="details" #newDetails type="text" rows="1" placeholder="Enter details here.."></textarea>
+  </label>
+  <label>Calories:
+    <input class = "form-control" name="calories" #newCalories type = "number" placeholder="Enter calories here..">
+  </label>
+  <button
+            class = "btn btn-info"
+            (click) = "
+            addClicked (newName.value, newDetails.value, newCalories.value);
+            newNames.value =  '';
+            newDetails.value = '';
+            newCalories.value = '';
+        ">Add New Meal</button>
+</form>

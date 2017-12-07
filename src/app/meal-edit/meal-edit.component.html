@@ -1,0 +1,30 @@
+<div *ngIf = "childSelectedMeal">
+
+        <hr/>
+
+        <h2>Edit Meal</h2>
+
+        <div>
+            <label>Name:</label>
+            <input class = "form-control" [(ngModel)] = "childSelectedMeal.name" type = "text" placeholder = "Name of the meal">
+        </div>
+
+        <div>
+            <label>Details:</label>
+            <input class = "form-control" [(ngModel)] = "childSelectedMeal.details" type = "text" placeholder = "Details about the meal">
+        </div>
+
+        <div>
+            <label>Calories:</label>
+            <input class = "form-control" [(ngModel)] = "childSelectedMeal.calories" type = "number" placeholder = "Number of calories in the meal">
+
+            <button class = "btn btn-add"
+                (click) = "doneClicked()"
+            >Done</button>
+            <button class = "btn btn-info"
+                (click) = "delClicked()"
+            >Delete</button>
+
+        </div>
+
+    </div>

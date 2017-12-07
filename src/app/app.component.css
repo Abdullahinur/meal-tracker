@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+* {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  text-shadow: 0.5px 0.5px;
+  font-family: Bungee Shade, cursive;
+  font-size: 80px;
+  animation: pulse 1s linear infinite;
+  background-color: #0077b3;
+  overflow: hidden;
+}

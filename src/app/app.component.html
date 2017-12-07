@@ -1,0 +1,13 @@
+<h1>Meal tracker</h1>
+<hr/>
+<meal-form (newMealSender)="addMeal($event)"></meal-form>
+<hr/>
+<meal-info [childMealList]="MealList" (clickSender)="showDetails($event)"></meal-info>
+
+<meal-edit [childSelectedMeal]="selectedMeal" (doneClickedSender)="finishedEditing()"></meal-edit>
+
+<footer>
+  <p id="copyright"><br/>
+    <small>Abdullahinur Abdullahi 2017</small>
+  </p>
+</footer>

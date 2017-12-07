@@ -1,0 +1,11 @@
+<h2>My Meals</h2>
+
+  <section class = "currentMealList">
+
+      <div *ngFor="let currentMeal of childMealList">
+
+          <h4 (click) = "nameHasBeenClicked(currentMeal)"> {{currentMeal.name}} </h4>
+
+      </div>
+
+  </section>
